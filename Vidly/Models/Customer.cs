@@ -13,6 +13,7 @@ namespace Vidly.Models
         public bool IsSubscribedToNewLetter { get; set; }
         public MemberShipType MemberShipType { get; set; }
         public byte MemberShipTypeId { get; set; }
+        [Display(Name = "Date of Birth")]
         public DateTime? BirthDate { get; set; }
     }
 }

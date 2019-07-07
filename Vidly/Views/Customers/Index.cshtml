@@ -6,6 +6,9 @@
 
 <h2>Customers</h2>
 
+@Html.ActionLink("Add Customer", "New", "Customers", new { @class = "btn btn-primary" })
+<hr />
+
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -17,10 +20,10 @@
         @foreach (var customer in Model)
         {
             <tr>
-                <td>@Html.ActionLink(customer.Name, "Details/" + customer.Id, "Customers")</td>
+                <td>@Html.ActionLink(customer.Name, "Edit/" + customer.Id, "Customers")</td>
                 <td>@customer.MemberShipType.Name</td>
             </tr>
         }
-    </tbody> 
+    </tbody>
 </table>
 
